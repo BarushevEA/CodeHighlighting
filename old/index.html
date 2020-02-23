@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="cdh_root0" class="cdh-code_block">
+    <div>@Hello world</div>
+    <div>getColor ( str ){ var z = "test" + str + 15.5; }</div>
+</div>
+<div id="cdh_root1" class="cdh-code_block"></div>
+<div id="cdh_root2" class="cdh-code_block"></div>
+<div id="cdh_root3" class="cdh-code_block"></div>
+<div id="cdh_root4" class="cdh-code_block"></div>
+<div id="cdh_root5" class="cdh-code_block"></div>
+<div id="cdh_root6" class="cdh-code_block"></div>
+<script src="cdh_md.js"></script>
+<script>
+    cdh_md.setRoot('cdh_root1');
+    cdh_md.setRows().push(
+        cdh_md.getRow().an('@Hello world'),
+        cdh_md.getRow().add('getColor ~~( str ){ ~~var ~~z = "test" + str + 15.5; }', 'fn vr md vr'),
+        cdh_md.getRow().block('getColor ~~(~~ str ~~){ ~~var ~~z ~~= ~~"test" ~~+ ~~str~~ + ~~15.5~~;~~ }', 'fn br vr br md vr br vt br vr br vn pt br'),
+        cdh_md.getRow().fn('getColor ').br('( ').vr(' str ').br(' )').br('{').md(' var ').vr('z').br(' = ').vt('"test"').br(' + ').vr('str').br(' + ').vn('15.5').pt(';').br(' }')
+    );
+    cdh_md.render();
+
+    cdh_md.setRoot('cdh_root2');
+    cdh_md.setRows().push(
+        cdh_md.getRow().an('@Hello world'),
+        cdh_md.getRow().block('~~getColor ~~void ~~(~~ qwe ~~){', 'tb fn md br vr br'),
+        cdh_md.getRow().block('~~}', 'tb br')
+    );
+    cdh_md.render();
+
+    cdh_md.setRoot('cdh_root3');
+    cdh_md.setRows().push(
+        cdh_md.getRow().an('@Hello world'),
+        cdh_md.getRow().tb().fn('getColor ').md('void ').br('( ').vr('qwe').br(' )').br('{'),
+        cdh_md.getRow().tb().br("}")
+    );
+    cdh_md.render();
+
+    cdh_md.setRoot('cdh_root4');
+    cdh_md.setSep('#');
+    cdh_md.setRows().push(
+        cdh_md.getRow().ct('// This is an experimental code format library'),
+        cdh_md.getRow().an('@Hello world'),
+        cdh_md.getRow().block('function# getColor# (# str #){', 'md fn br vr br'),
+        cdh_md.getRow().tb().block('var# z# = #10#;', 'md vr br vn pt'),
+        cdh_md.getRow().tb().block('var# tmp# = #str#;', 'md vr br vr pt'),
+        cdh_md.getRow().tb().block('tmp# += #z#;', 'vr br vr pt'),
+        cdh_md.getRow().br('}'),
+        cdh_md.getRow().tb(),
+        cdh_md.getRow().ns('12313a lorem ').block('Math#.sin#(# x #)', 'ts fn br vr br').ns(' 12313a lorem')
+    );
+    cdh_md.render();
+
+    cdh_md.setSep('~~');
+    cdh_md.setRoot('cdh_root5');
+    cdh_md.setRows().push(
+        cdh_md.getRow().ct('// This is an experimental code format library'),
+        cdh_md.getRow().tb(),
+        cdh_md.getRow().an('@Hello world'),
+        cdh_md.getRow().add('function~~ getColor (~~ str, "text\\"`" ){', 'md fn vr'),
+        cdh_md.getRow().tb().add('var~~ z = 10.5;', 'md vr'),
+        cdh_md.getRow().tb().add('var~~ tmp != str, x = 21, z = "test1";', 'md vr'),
+        cdh_md.getRow().tb().add('tmp += z;', 'vr'),
+        cdh_md.getRow().tb().add('str = "txt";', 'vr'),
+        cdh_md.getRow().br('}'),
+        cdh_md.getRow().tb(),
+        cdh_md.getRow().add('&lt;script src="cdh_md.js"&gt;&lt;/script&gt;', 'vr'),
+        cdh_md.getRow().pt('&lt;').add('script src="cdh_md.js"', 'vr').pt('&gt;').pt('&lt;').vr('/script').pt('&gt;'),
+        cdh_md.getRow().block('&lt;~~script src="cdh_md.js"~~&gt;&lt;~~/script~~&gt;', 'pt vr pt vr pt'),
+        cdh_md.getRow().tb(),
+        cdh_md.getRow().ns('12313a lorem ').add('Math.~~sin~~( x )', 'ts fn vr').ns(' 12313a lorem')
+    );
+    cdh_md.render();
+
+    /**
+     * EXAMPLE FOR USE
+     */
+
+    cdh_md.setRoot('cdh_root6');
+    cdh_md.setRows().push(
+        cdh_md.getRow().add("cdh_md.~~setRoot('cdh_root4');","ts fd"),
+        cdh_md.getRow().add("cdh_md.~~setSep('#');","ts fd"),
+        cdh_md.getRow().add("cdh_md.~~setRows().~~push(","ts fd fn"),
+        cdh_md.getRow().tb().add("cdh_md.~~getRow()~~.ct('// This is an experimental code format library'),","ts fd fn"),
+        cdh_md.getRow().tb().add("cdh_md.~~getRow()~~.an('@Hello world'),","ts fd fn"),
+        cdh_md.getRow().tb().add("cdh_md.~~getRow()~~.block('function# getColor# (# str #){', 'md fn br vr br'),","ts fd fn"),
+        cdh_md.getRow().tb().add("cdh_md.~~getRow()~~.tb().block('var# z# = #10#;', 'md vr br vn pt'),","ts fd fn"),
+        cdh_md.getRow().tb().add("cdh_md.~~getRow()~~.tb().block('var# tmp# = #str#;', 'md vr br vr pt'),","ts fd fn"),
+        cdh_md.getRow().tb().add("cdh_md.~~getRow()~~.tb().block('tmp# += #z#;', 'vr br vr pt'),","ts fd fn"),
+        cdh_md.getRow().tb().add("cdh_md.~~getRow()~~.br('}'),","ts fd fn"),
+        cdh_md.getRow().tb().add("cdh_md.~~getRow()~~.tb(),","ts fd fn"),
+        cdh_md.getRow().tb().add("cdh_md.~~getRow()~~.ns('12313a lorem ').block('Math#.sin#(# x #)', 'ts fn br vr br').ns(' 12313a lorem')","ts fd fn"),
+        cdh_md.getRow().add(");","vr"),
+        cdh_md.getRow().add("cdh_md.~~render();","ts fd")
+    );
+    cdh_md.render();
+</script>
+</body>
+</html>

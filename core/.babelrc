@@ -1,0 +1,10 @@
+{
+  "presets": [
+    ["@babel/env",{"loose": true}],
+    "@babel/typescript"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/proposal-object-rest-spread"
+  ]
+}

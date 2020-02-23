@@ -1,0 +1,73 @@
+body{
+    background: #313335;
+    color: white;
+}
+.cdh-code_block {
+    border: solid 5px rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 10px;
+    width: 75%;
+    background: rgba(0, 0, 0, 0.05);
+    margin: 5px;
+    background: #2b2b2b;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+.cdh-modifier {
+    color: #b37731;
+    font-weight: bold;
+}
+
+.cdh-function {
+    color: #dec56c;
+    /*font-weight: bold;*/
+}
+
+.cdh-var {
+    color: #94a5bb;
+}
+
+.cdh-field {
+    color: #9876aa;
+}
+
+.cdh-var_text {
+    color: #558658;
+}
+
+.cdh-var_num {
+    color: #6c85bb;
+}
+
+.cdh-braces {
+    color: #d5d0d9;
+}
+
+.cdh-annotation {
+    color: #d2a800;
+}
+
+.cdh-this {
+    color: #966229;
+    font-weight: bold;
+}
+
+.cdh-punctuation {
+    color: #cb8a36;
+}
+
+.cdh-comment {
+    color: rgba(101, 178, 81, 0.84);
+}
+
+.cdh-tab {
+    margin-left: 50px;
+}
+
+.cdh-row {
+    width: 100%;
+    /* background: rgba(255, 255, 255, 0.1); */
+    margin: 5px 0;
+}

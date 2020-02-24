@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
-    <script src="../dist_dev/libs/cdh_md.js"></script>
+<!--    <script src="../dist_dev/libs/cdh_md.js"></script>-->
+    <script src="cdh_md.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -38,8 +39,8 @@
     cdh_md.setRoot('cdh_root2');
     cdh_md.setRows().push(
         cdh_md.getRow().an('@Hello world'),
-        cdh_md.getRow().block('~~getColor ~~void ~~(~~ qwe ~~){', 'tb fn md br vr br'),
-        cdh_md.getRow().block('~~}', 'tb br')
+        cdh_md.getRow().block('~~getColor ~~void ~~(~~ qwe ~~){', 'fn md br vr br'),
+        cdh_md.getRow().block('~~}', 'br')
     );
     cdh_md.render();
 

@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
+    <script src="../dist_dev/libs/cdh_md.js"></script>
 </head>
 <body>
-<div id="cdh_root0" class="cdh-code_block">
-    <div>@Hello world</div>
-    <div>getColor ( str ){ var z = "test" + str + 15.5; }</div>
+<div class="wrapper">
+    <div id="cdh_root0" class="cdh-code_block">
+        <div>@Hello world</div>
+        <div>getColor ( str ){ var z = "test" + str + 15.5; }</div>
+    </div>
+    <div id="cdh_root1" class="cdh-code_block"></div>
+    <div id="cdh_root2" class="cdh-code_block"></div>
+    <div id="cdh_root3" class="cdh-code_block"></div>
+    <div id="cdh_root4" class="cdh-code_block"></div>
+    <div id="cdh_root5" class="cdh-code_block"></div>
+    <div id="cdh_root6" class="cdh-code_block"></div>
+    <div id="cdh_root7" class="cdh-code_block"></div>
 </div>
-<div id="cdh_root1" class="cdh-code_block"></div>
-<div id="cdh_root2" class="cdh-code_block"></div>
-<div id="cdh_root3" class="cdh-code_block"></div>
-<div id="cdh_root4" class="cdh-code_block"></div>
-<div id="cdh_root5" class="cdh-code_block"></div>
-<div id="cdh_root6" class="cdh-code_block"></div>
-<div id="cdh_root7" class="cdh-code_block"></div>
-<!--<script src="cdh_md.js"></script>-->
-<script src="../dist_dev/libs/cdh_md.js"></script>
 <script>
+    /**
+     * EXAMPLES FOR USE
+     */
+
+    // combined methods by functions
     cdh_md.setRoot('cdh_root1');
     cdh_md.setRows().push(
         cdh_md.getRow().an('@Hello world'),
@@ -81,10 +87,6 @@
     );
     cdh_md.render();
 
-    /**
-     * EXAMPLE FOR USE
-     */
-
     cdh_md.setRoot('cdh_root6');
     cdh_md.setRows().push(
         cdh_md.getRow().add("cdh_md.~~setRoot('cdh_root4');", "ts fd"),
@@ -104,6 +106,7 @@
     );
     cdh_md.render();
 
+    // simple array method
     cdh_md.setRoot('cdh_root7');
     cdh_md.setRows([
         ["cdh_md.~~setRoot('cdh_root4');", "ts fd"],

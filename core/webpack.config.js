@@ -5,7 +5,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'src'),
 
     output: {
-        filename: 'bundle.js',
+        filename: 'cdh_md.js',
         path: path.resolve(__dirname, '../', 'dist_dev', 'libs'),
     },
 
